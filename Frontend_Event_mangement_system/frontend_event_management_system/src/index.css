@@ -1,8 +1,360 @@
 body {
   font-family: Arial;
+  background: #f4f6f8;
   text-align: center;
 }
-input, button {
-  margin: 5px;
+
+input {
+  display: block;
+  margin: 10px auto;
   padding: 8px;
+  width: 250px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.center {
+  margin-top: 80px;
+}
+
+.card {
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 0 5px gray;
+}
+
+.navbar {
+  background: #222;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* AUTH PAGE LAYOUT */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* LEFT PANEL */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #6a85f1, #8fd3f4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.auth-left h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.auth-left p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* RIGHT PANEL */
+.auth-right {
+  flex: 1;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.auth-card {
+  width: 360px;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: none;
+  border-bottom: 2px solid #6a85f1;
+  outline: none;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 18px;
+  background: #6a85f1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #5a74e8;
+}
+
+.auth-switch {
+  margin-top: 15px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+.home-container {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #6a85f1, #8fd3f4);
+  color: white;
+}
+
+.home-btn {
+  padding: 8px 16px;
+  margin-left: 10px;
+  background: white;
+  color: #6a85f1;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-btn.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* HERO */
+.home-hero {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.home-hero h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.home-hero p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* SLIDER */
+.slider-wrapper {
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.slider {
+  display: flex;
+  gap: 25px;
+  animation: slide 25s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.event-card {
+  min-width: 260px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  padding: 12px;
+}
+
+/* INFO */
+.home-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+}
+
+.info-card {
+  max-width: 260px;
+  text-align: center;
+}
+.dashboard-container {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-event {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.add-event input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.add-event button {
+  background: #6a85f1;
+  color: white;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.event-row {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.dashboard-container {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-event {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.add-event input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+
+
+.event-row {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+/* ADD EVENT CARD */
+.add-event {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.add-event h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.add-event {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.add-event input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.add-event button {
+  width: 100%;
+  padding: 10px;
+}
+
+.event-row {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  height: 40px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
